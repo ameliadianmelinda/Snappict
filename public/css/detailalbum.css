@@ -1,0 +1,201 @@
+@font-face {
+  font-family: Poppins-Regular;
+  src: url("../fonts/poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url("../fonts/poppins/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url("../fonts/poppins/Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url("../fonts/poppins/Poppins-SemiBold.ttf");
+}
+
+
+/* beranda */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins-Regular;
+}
+
+.gridds {
+  columns: 6;
+  column-gap: 15px;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.gridds .box {
+  width: 100%;
+  margin-bottom: 10px;
+  break-inside: avoid;
+  position: relative;
+}
+
+.gridds .box img {
+  max-width: 100%;
+  border-radius: 15px;
+  position: relative;
+  height: 100%;
+}
+
+.hover-box {
+  position: absolute;
+  width: 100%;
+  height: 99%;
+  top: 0px;
+  bottom: 0px;
+  opacity: 0;
+  padding: 8px;
+  align-items: center;
+}
+
+.hover-box > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.hover-box > ul > li{
+  list-style: none;
+  font-size: 10px;
+  color: white;
+}
+
+.hover-box:hover {
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  cursor: zoom-in;
+  display: flex;
+  align-content: end;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: rgba(37, 7, 41, 0.5);
+  user-select: none;
+  margin-bottom: 3%;
+}
+
+
+.container-1 {
+  text-align: center;
+  padding: 20px;
+}
+
+.edit-album {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.header-album  p {
+  text-align: center;
+}
+
+.cover-album-detail {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  margin: auto;
+}
+
+.sub-menu-wrap-komen {
+  position: absolute;
+  transition: 0.2s;
+  display: none;
+  transition: 0.2s;
+}
+
+.sub-menu-wrap-komen.open-menu-komen-1 {
+  display: block;
+}
+
+.sub-menu-komen {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  width: 100px;
+  top: 20px;
+  left: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-menu-komen > a {
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+  text-align: left;
+}
+
+.sub-menu-komen > a:hover {
+  color: rgb(202, 110, 202);
+  transition: all .2s ease-in-out;
+}
+
+
+@media (max-width: 1200px) {
+  .gridds {
+    width: calc(100% - 40px);
+    columns: 5;
+  }
+
+  .hover-box > ul > li {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 780px) {
+  .gridds {
+    columns: 4;
+  }
+
+  .hover-box > ul > li {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 750px) {
+  .gridds {
+    columns: 3;
+  }
+
+  .hover-box > ul > li {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 690px) {
+  .gridds {
+    columns: 2;
+  }
+
+  .hover-box > ul > li {
+    font-size: 6px;
+  }
+}
+/* beranda terbaru */

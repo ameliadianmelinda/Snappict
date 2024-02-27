@@ -1,0 +1,156 @@
+@font-face {
+  font-family: Poppins-Regular;
+  src: url("../fonts/poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url("../fonts/poppins/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url("../fonts/poppins/Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url("../fonts/poppins/Poppins-SemiBold.ttf");
+}
+
+/* beranda */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins-Regular;
+}
+
+.add {
+  margin-top: 10px;
+}
+
+.fa-plus {
+  background-color: #e4d4e6;
+  padding: 15px;
+  border-radius: 100%;
+}
+
+.fa-plus:hover {
+  background-color: #cfc1d1;
+}
+
+.grids {
+  margin: 20px auto;
+  columns: 6;
+  column-gap: 15px;
+  margin-top: 30px;
+}
+
+.grids .box {
+  width: 100%;
+  margin-bottom: 10px;
+  break-inside: avoid;
+  position: relative;
+}
+
+.grids .box img {
+  max-width: 100%;
+  border-radius: 15px;
+  position: relative;
+  height: 100%;
+}
+
+.fa-pencil {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 100%;
+  color: rgb(114, 85, 114);
+  margin-left: 180px;
+}
+
+.deskripsi {
+  text-align: start;
+}
+
+.hover-box {
+  position: absolute;
+  width: 100%;
+  height: 99%;
+  top: 0px;
+  bottom: 0px;
+  opacity: 0;
+  padding: 8px;
+  align-items: center;
+}
+
+.hover-box:hover {
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  bottom: 30px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  cursor: zoom-in;
+  display: flex;
+  align-content: end;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: rgba(37, 7, 41, 0.5);
+  user-select: none;
+}
+
+@media (max-width: 1200px) {
+  .grids {
+    width: calc(100% - 40px);
+    columns: 5;
+  }
+}
+
+@media (max-width: 780px) {
+  .grids {
+    columns: 4;
+  }
+}
+
+@media (max-width: 750px) {
+  .grids {
+    columns: 3;
+  }
+}
+
+@media (max-width: 690px) {
+  .grids {
+    columns: 2;
+  }
+}
+
+@media (max-width: 440px) {
+  .grids {
+    columns: 2;
+  }
+
+  .fa-plus {
+    padding: 10px;
+  }
+
+  .deskripsi {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 340px) {
+  .grids {
+    columns: 2;
+  }
+
+  .fa-plus {
+    padding: 8px;
+  }
+
+  .deskripsi {
+    font-size: 12px;
+  }
+}
+/* beranda terbaru */

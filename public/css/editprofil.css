@@ -1,0 +1,1311 @@
+@font-face {
+  font-family: Poppins-Regular;
+  src: url("../fonts/poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url("../fonts/poppins/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url("../fonts/poppins/Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url("../fonts/poppins/Poppins-SemiBold.ttf");
+}
+
+
+/* beranda terbaru */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins-Regular;
+}
+
+.edit-profil {
+  font-family: "Poppins-Regular";
+  margin-top: 50px;
+  margin-bottom: 25px;
+  margin-left: 180px;
+  margin-right: 180px;
+  padding-bottom: 10px; 
+  background-color: white;
+  box-shadow: 0 3px 15px 0 #ecdfee;
+  height: auto;
+  justify-content: center;
+  align-content: center;
+  border-radius: 20px;
+  padding: 40px;
+  position: relative;
+}
+
+.edit-profil h1 {
+  font-family: "Poppins-Bold";
+  font-size: 30px;
+  color: #000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.nav-edit {
+  font-size:20px;
+}
+
+.nav-info {
+  font-size:15px;
+}
+
+.change {
+  color : red;
+  font-size: 11px;
+}
+
+.detail {
+  margin-top: 50px;
+}
+
+.image-upload-wrap {
+  margin-top: 12px;
+  background-color: white;
+  border-radius: 100%;
+  border-color: rgb(199, 193, 193);
+  width: 120px;
+  height: 120px;
+}
+
+.image-upload-wrap > img {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  left: 0;
+  top: 0;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 120px;
+  height: 120px;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-upload-add {
+  border-radius: 10px;
+  border-style: none;
+  background-color: #E6DDE7;
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+}
+
+.file-upload-content {
+  align-items: center;
+  display: none;
+}
+
+.file-upload-image {
+  width: 120px;
+  height: 120px;
+  padding: 3px;
+  border: 0.5px solid #d7d7dd;
+  border-radius: 100%;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+}
+
+.remove-image {
+  width: 80px;
+  height: 30px;
+  color: #fff;
+  background-color: rgba(231, 14, 14, 0.6);
+  border-style: none;
+  border-radius: 10px;
+  transition: all 2.s ease;
+  outline: none;
+  padding: 2px;
+  position: absolute;
+}
+
+.remove-image:hover {
+  background-color: rgb(247, 3, 3, 0.7);
+  transition: all 2.s ease;
+  color: #fff;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all 2.s ease;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+  background-color: rgba(216, 203, 203, 0.4);
+}
+
+.class2 {
+  display: flex;
+  flex-direction: column;
+} 
+
+.class2 > input {
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: 0px 1px 4px 0px rgb(97, 96, 96, 0.5);
+  width: 750px;
+  height: 45px;
+  outline-style: none;
+  padding: 15px;
+  margin-top: 5px;
+}
+
+.submit {
+  background-color: #E6DDE7;
+  width: 120px;
+  border-style: none;
+  border-radius: 10px;
+  height: 40px;
+  margin-top: 10px;
+  margin-left: 630px;
+}
+
+.submit:hover {
+  background-color: #d4cad4;
+}
+
+@media (max-width: 1194px) {
+  
+  .edit-profil {
+    margin-left: 160px;
+    margin-right: 160px;
+  }
+}
+
+@media (max-width: 1180px) {
+  
+  .edit-profil {
+    margin-left: 140px;
+    margin-right: 140px;
+  }
+}
+
+
+@media (max-width: 1150px) {
+  
+  .edit-profil {
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+}
+
+@media (max-width: 1099px) {
+  
+  .edit-profil {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: 1056px) {
+  
+  .edit-profil {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+}
+
+@media (max-width: 1010px) {
+  
+  .edit-profil {
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 961px) {
+  
+  .edit-profil {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 910px) {
+  
+  .edit-profil {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 876px) {
+  
+  .edit-profil {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 867px) {
+  
+  .edit-profil {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+  }
+
+  .nav-edit {
+    font-size: 20px;
+  }
+  
+  .nav-info {
+    font-size: 14px;
+  }
+
+  .class1-pp {
+    font-size: 16px;
+  }
+
+  .change {
+    font-size: 11px;
+  }
+
+  .image-upload-wrap {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .image-upload-wrap > img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-input {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-add {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .remove-image {
+    width: 70px;
+  }
+
+  .class2 {
+    font-size: 16px;
+  }
+
+  .class2 > input {
+    width: 700px;
+  }
+
+  .submit {
+    width: 100px;
+    margin-left: 600px;
+  }
+}
+
+@media (max-width: 817px) {
+  
+  .edit-profil {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+  }
+
+  .nav-edit {
+    font-size: 18px;
+  }
+  
+  .nav-info {
+    font-size: 13px;
+  }
+
+  .class1-pp {
+    font-size: 15px;
+  }
+
+  .change {
+    font-size: 10px;
+  }
+
+  .image-upload-wrap {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .image-upload-wrap > img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-input {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-add {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .remove-image {
+    width: 70px;
+  }
+
+  .class2 {
+    font-size: 15px;
+  }
+
+  .class2 > input {
+    width: 680px;
+  }
+
+  .submit {
+    width: 100px;
+    margin-left: 580px;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .edit-profil {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+  }
+
+  .nav-edit {
+    font-size: 18px;
+  }
+  
+  .nav-info {
+    font-size: 13px;
+  }
+
+  .class1-pp {
+    font-size: 15px;
+  }
+
+  .change {
+    font-size: 10px;
+  }
+
+  .image-upload-wrap {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .image-upload-wrap > img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-input {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-add {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .remove-image {
+    width: 70px;
+  }
+
+  .class2 {
+    font-size: 15px;
+  }
+
+  .class2 > input {
+    width: 630px;
+  }
+
+  .submit {
+    width: 100px;
+    margin-left: 540px;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .edit-profil {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+  }
+
+  .nav-edit {
+    font-size: 18px;
+  }
+  
+  .nav-info {
+    font-size: 13px;
+  }
+
+  .class1-pp {
+    font-size: 15px;
+  }
+
+  .change {
+    font-size: 10px;
+  }
+
+  .image-upload-wrap {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .image-upload-wrap > img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-input {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-add {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .remove-image {
+    width: 70px;
+  }
+
+  .class2 {
+    font-size: 15px;
+  }
+
+  .class2 > input {
+    width: 610px;
+  }
+
+  .submit {
+    width: 100px;
+    margin-left: 510px;
+  }
+}
+
+@media (max-width: 722px) {
+  
+  .edit-profil {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+  }
+
+  .nav-edit {
+    font-size: 18px;
+  }
+  
+  .nav-info {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .class1-pp {
+    font-size: 15px;
+  }
+
+  .change {
+    font-size: 10px;
+  }
+
+  .image-upload-wrap {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .image-upload-wrap > img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-input {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-add {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .remove-image {
+    width: 70px;
+  }
+
+  .class2 {
+    font-size: 15px;
+  }
+
+  .class2 > input {
+    width: 580px;
+  }
+
+  .submit {
+    width: 100px;
+    margin-left: 480px;
+  }
+}
+
+@media (max-width: 690px) {
+  
+  .edit-profil {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+  }
+
+  .nav-edit {
+    font-size: 18px;
+  }
+  
+  .nav-info {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .class1-pp {
+    font-size: 15px;
+  }
+
+  .change {
+    font-size: 10px;
+  }
+
+  .image-upload-wrap {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .image-upload-wrap > img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-input {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-add {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .remove-image {
+    width: 70px;
+  }
+
+  .class2 {
+    font-size: 15px;
+  }
+
+  .class2 > input {
+    width: 555px;
+  }
+
+  .submit {
+    width: 80px;
+    margin-left: 475px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 656px) {
+  
+  .edit-profil {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+  }
+
+  .nav-edit {
+    font-size: 18px;
+  }
+  
+  .nav-info {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .class1-pp {
+    font-size: 15px;
+  }
+
+  .change {
+    font-size: 10px;
+  }
+
+  .image-upload-wrap {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .image-upload-wrap > img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-input {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-add {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .remove-image {
+    width: 70px;
+  }
+
+  .class2 {
+    font-size: 15px;
+  }
+
+  .class2 > input {
+    width: 530px;
+  }
+
+  .submit {
+    width: 80px;
+    margin-left: 450px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 633px) {
+  
+  .edit-profil {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+  }
+
+  .nav-edit {
+    font-size: 18px;
+  }
+  
+  .nav-info {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .class1-pp {
+    font-size: 15px;
+  }
+
+  .change {
+    font-size: 10px;
+  }
+
+  .image-upload-wrap {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .image-upload-wrap > img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-input {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-add {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .remove-image {
+    width: 70px;
+  }
+
+  .class2 {
+    font-size: 15px;
+  }
+
+  .class2 > input {
+    width: 500px;
+  }
+
+  .submit {
+    width: 80px;
+    margin-left: 420px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 602px) {
+  
+  .edit-profil {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+  }
+
+  .nav-edit {
+    font-size: 18px;
+  }
+  
+  .nav-info {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .class1-pp {
+    font-size: 15px;
+  }
+
+  .change {
+    font-size: 10px;
+  }
+
+  .image-upload-wrap {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .image-upload-wrap > img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-input {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-add {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .remove-image {
+    width: 70px;
+  }
+
+  .class2 {
+    font-size: 15px;
+  }
+
+  .class2 > input {
+    width: 470px;
+  }
+
+  .submit {
+    width: 80px;
+    margin-left: 390px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  
+  .edit-profil {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+  }
+
+  .nav-edit {
+    font-size: 18px;
+  }
+  
+  .nav-info {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .class1-pp {
+    font-size: 15px;
+  }
+
+  .change {
+    font-size: 10px;
+  }
+
+  .image-upload-wrap {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .image-upload-wrap > img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-input {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-add {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .remove-image {
+    width: 70px;
+  }
+
+  .class2 {
+    font-size: 15px;
+  }
+
+  .class2 > input {
+    width: 440px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  .submit {
+    width: 80px;
+    margin-left: 360px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 543px) {
+  
+  .edit-profil {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+  }
+
+  .nav-edit {
+    font-size: 18px;
+  }
+  
+  .nav-info {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .class1-pp {
+    font-size: 15px;
+  }
+
+  .change {
+    font-size: 10px;
+  }
+
+  .image-upload-wrap {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .image-upload-wrap > img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-input {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-add {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .remove-image {
+    width: 70px;
+  }
+
+  .class2 {
+    font-size: 15px;
+  }
+
+  .class2 > input {
+    width: 400px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  .submit {
+    width: 80px;
+    margin-left: 320px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 504px) {
+  
+  .edit-profil {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+  }
+
+  .nav-edit {
+    font-size: 18px;
+  }
+  
+  .nav-info {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .class1-pp {
+    font-size: 15px;
+  }
+
+  .change {
+    font-size: 10px;
+  }
+
+  .image-upload-wrap {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .image-upload-wrap > img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-input {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-add {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .remove-image {
+    width: 70px;
+  }
+
+  .class2 {
+    font-size: 15px;
+  }
+
+  .class2 > input {
+    width: 370px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  .submit {
+    width: 80px;
+    height: 30px;
+    margin-left: 290px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 474px) {
+  
+  .edit-profil {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+  }
+
+  .nav-edit {
+    font-size: 18px;
+  }
+  
+  .nav-info {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .class1-pp {
+    font-size: 15px;
+  }
+
+  .change {
+    font-size: 9px;
+  }
+
+  .image-upload-wrap {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .image-upload-wrap > img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-input {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-add {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .remove-image {
+    width: 70px;
+  }
+
+  .class2 {
+    font-size: 15px;
+  }
+
+  .class2 > input {
+    width: 340px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  .submit {
+    width: 80px;
+    height: 30px;
+    margin-left: 260px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 441px) {
+  
+  .edit-profil {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+  }
+
+  .nav-edit {
+    font-size: 18px;
+  }
+  
+  .nav-info {
+    font-size: 11px;
+    margin-top: 5px;
+  }
+
+  .class1-pp {
+    font-size: 15px;
+  }
+
+  .change {
+    font-size: 9px;
+  }
+
+  .image-upload-wrap {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .image-upload-wrap > img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-input {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-add {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .remove-image {
+    width: 70px;
+  }
+
+  .class2 {
+    font-size: 15px;
+  }
+
+  .class2 > input {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  .submit {
+    width: 80px;
+    height: 30px;
+    margin-left: 220px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 395px) {
+  
+  .edit-profil {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+  }
+
+  .nav-edit {
+    font-size: 18px;
+  }
+  
+  .nav-info {
+    font-size: 11px;
+    margin-top: 5px;
+  }
+
+  .class1-pp {
+    font-size: 15px;
+  }
+
+  .change {
+    font-size: 9px;
+  }
+
+  .image-upload-wrap {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .image-upload-wrap > img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-input {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-add {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-upload-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .remove-image {
+    width: 70px;
+  }
+
+  .class2 {
+    font-size: 15px;
+  }
+
+  .class2 > input {
+    width: 270px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  .submit {
+    width: 80px;
+    height: 30px;
+    margin-left: 190px;
+    font-size: 12px;
+  }
+}
+
