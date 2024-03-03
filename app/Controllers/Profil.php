@@ -43,8 +43,14 @@ class Profil extends BaseController
         $this->session = \Config\Services::session();
     }
 
-    public function index($id): string
+    public function index($id)
     {
+         // Periksa apakah ada data session untuk user
+         if (!session()->get('userid')) {
+            // Jika tidak, arahkan ke halaman login
+            return redirect()->to('/');
+        }
+
         //menampilkan username sesuai session login
         $user = $this->userModel->where('userid', session()->get('userid'))->first();
         $userid = $user['userid'];
@@ -66,8 +72,14 @@ class Profil extends BaseController
         return view('pribadi/postingan', $data);
     }
 
-    public function album(): string
+    public function album()
     {
+         // Periksa apakah ada data session untuk user
+         if (!session()->get('userid')) {
+            // Jika tidak, arahkan ke halaman login
+            return redirect()->to('/');
+        }
+
         //menampilkan username sesuai session login
         $user = $this->userModel->where('userid', session()->get('userid'))->first();
         $userid = $user['userid'];
@@ -83,6 +95,13 @@ class Profil extends BaseController
 
     public function createalbum()
     {
+         // Periksa apakah ada data session untuk user
+         if (!session()->get('userid')) {
+            // Jika tidak, arahkan ke halaman login
+            return redirect()->to('/');
+        }
+
+
         return view('pribadi/createalbum');
     }
 
@@ -107,6 +126,13 @@ class Profil extends BaseController
 
     public function galerialbum($id)
     {
+         // Periksa apakah ada data session untuk user
+         if (!session()->get('userid')) {
+            // Jika tidak, arahkan ke halaman login
+            return redirect()->to('/');
+        }
+
+
         // ambil data album sesuai dengan id
         $dataalbum = $this->albumModel->where('albumid', $id)->findAll();
 
@@ -142,7 +168,7 @@ class Profil extends BaseController
         return view('pribadi/editalbum', $data);
     }
 
-    // buat controller untuk update album
+   
     public function updatealbum($id)
     {
         // Ambil data album sesuai dengan id
@@ -190,18 +216,23 @@ class Profil extends BaseController
         // Hapus foto dari tabel albumsaveModel berdasarkan fotoid dan albumid
         $this->albumsaveModel->where('fotoid', $fotoid)->where('albumid', $albumid)->delete();
 
-        // Hapus album dari tabel fotoModel berdasarkan albumid
-        $this->fotoModel->where('albumid', $albumid)->delete();
+        // Hapus albumid dari tabel fotoModel berdasarkan albumid
+        $this->fotoModel->where('albumid', $albumid)->set(['albumid' => null])->update();
 
-
-        return redirect()->to('/profil-album');
+        
+        session()->setFlashdata('hpsfoto', 'Foto telah dihapus dari album');
+        return redirect()->back();
     }
 
 
-
-
-    public function suka($id): string
+    public function suka($id)
     {
+         // Periksa apakah ada data session untuk user
+         if (!session()->get('userid')) {
+            // Jika tidak, arahkan ke halaman login
+            return redirect()->to('/');
+        }
+
         //menampilkan foto yang disukai oleh user yang login 
         $user = $this->userModel->getUser($id);
         $liked = $this->likeModel->getLikedFoto($id);
@@ -219,8 +250,14 @@ class Profil extends BaseController
         return view('pribadi/suka', $data);
     }
 
-    public function settings(): string
+    public function settings()
     {
+         // Periksa apakah ada data session untuk user
+         if (!session()->get('userid')) {
+            // Jika tidak, arahkan ke halaman login
+            return redirect()->to('/');
+        }
+
         //menampikan username sesuai session login
         $user = $this->userModel->getUser(session()->get('userid'));
 

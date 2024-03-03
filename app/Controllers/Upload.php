@@ -29,6 +29,13 @@ class Upload extends BaseController
 
     public function index(): string
     {
+         // Periksa apakah ada data session untuk user
+         if (!session()->get('userid')) {
+            // Jika tidak, arahkan ke halaman login
+            return redirect()->to('/');
+        }
+
+
         return view('upload');
     }
 
@@ -55,6 +62,12 @@ class Upload extends BaseController
 
     public function search()
     {
+         // Periksa apakah ada data session untuk user
+         if (!session()->get('userid')) {
+            // Jika tidak, arahkan ke halaman login
+            return redirect()->to('/');
+        }
+
         $keyword = $this->request->getVar('keyword');
         $foto = $this->fotoModel->getFotoByKeyword($keyword);
         $akun = $this->userModel->getUserByKeyword($keyword);
@@ -137,35 +150,7 @@ class Upload extends BaseController
             'albumid' => $albumid['albumid'], 
         ]);
 
+        session()->setFlashdata('addalbum', 'Foto berhasil ditambahkan ke album');
         return redirect()->back();
     }
-
-    // buat controller untuh hapus foto di album save album
-    // public function hapusAlbums($fotoid, $albumsaveid)
-    // {
-    //     $this->albumsaveModel->gethapusAlbums($fotoid, $albumsaveid);
-    //     return redirect()->back();
-    // }
-
-
-
-
-
-    // public function addfotoalbum($id)
-    // {
-
-    //     $foto = $this->fotoModel->find($id);
-
-    //     $albumid = $this->albumModel->find($id);
-
-    //     $userid = session()->get('userid');
-
-    //     $this->albumsaveModel->save([
-    //         'fotoid' => $foto,
-    //         'albumid' => $albumid,
-    //         'userid' => $userid
-    //     ]);
-
-    //     return redirect()->to('/profil-album', $id);
-    // }
 }

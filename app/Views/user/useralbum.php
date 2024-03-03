@@ -48,22 +48,30 @@
 <?php endif; ?>
 
 <row>
-    <div class="grids">
-        <?php foreach ($album as $al) : ?>
-            <div class="box">
-                <div class="cover">
-                    <img src="/image_storage/<?= $al['cover_album']; ?>" alt="">
-                </div>
+    <?php if (!empty($album)) : ?>
+        <div class="grids">
+            <?php foreach ($album as $al) : ?>
+                <div class="box">
 
-                <div class="deskripsi">
-                    <p><?= $al['nama_album'] ?></p>
-                </div>
+                    <a href="/galeri-album/<?= $al['albumid']; ?>" style="text-decoration:none; color:black;">
+                        <div class="cover">
+                            <img src="/image_storage/<?= $al['cover_album']; ?>" alt="">
+                        </div>
 
-                <div class="hover-box">
+                        <div class="deskripsi">
+                            <p><?= $al['nama_album'] ?></p>
+                        </div>
+
+                        <div class="hover-box">
+                        </div>
+                    </a>
                 </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
+                
+            <?php endforeach; ?>
+        </div>
+    <?php else : ?>
+        <center><p style="font-size:14px;  color:gray;">Belum ada album yang dibuat</p></center>
+    <?php endif; ?>
 </row>
 
 <?= $this->endSection(); ?>

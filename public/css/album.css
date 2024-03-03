@@ -30,6 +30,11 @@
   margin-top: 10px;
 }
 
+.icon-add > a {
+  text-decoration: none;
+  color: black;
+}
+
 .fa-plus {
   background-color: #e4d4e6;
   padding: 15px;
@@ -38,6 +43,7 @@
 
 .fa-plus:hover {
   background-color: #cfc1d1;
+  color: white;
 }
 
 .grids {

@@ -35,7 +35,6 @@ class Auth extends BaseController
 
     public function valid_register()
     {
-        
         // Tangkap data dari form
         $data = [
             'username' => $this->request->getVar('username'),
@@ -47,19 +46,19 @@ class Auth extends BaseController
         // cek apakah username sudah ada di database
         $user = $this->userModel->where('username', $data['username'])->first();
 
-        // cek apakah email sudah ada di database
+        // cek apakah email sudah ada di database   
         $email = $this->userModel->where('email', $data['email'])->first();
-
         
-        // jalankan validasi email
-        if ($email) {
-            session()->setFlashdata('email', 'Email sudah dipakai');
-            return redirect()->to('/register');
-        }
         
         // jalankan validasi username 
         if ($user) {
             session()->setFlashdata('username', 'Username sudah dipakai');
+            return redirect()->to('/register');
+        }
+
+        // jalankan validasi email
+        if ($email) {
+            session()->setFlashdata('email', 'Email sudah dipakai');
             return redirect()->to('/register');
         }
 
@@ -68,7 +67,7 @@ class Auth extends BaseController
             session()->setFlashdata('password', 'Password harus terdiri dari 8 huruf atau angka');
             return redirect()->to('/register');
         }
-        
+
         // jalankan validasi confirm password
         if ($data['password'] != $data['confirm']) {
             session()->setFlashdata('confirm', 'Password tidak sama');
@@ -98,6 +97,29 @@ class Auth extends BaseController
         session()->setFlashdata('login', 'Anda berhasil mendaftar, silahkan cek email anda untuk aktivasi akun');
         return redirect()->to('/');
     }
+
+    public function activate($token)
+    {
+        if ($token) {
+            $user = $this->userModel->where(['active' => $token])->first();
+            if ($user) {
+                $this->userModel->save([
+                    'userid' => $user['userid'],
+                    'active' => 'true'
+                ]);
+
+                session()->setFlashdata('aktif', 'Akun berhasil diaktivasi');
+                return redirect()->to('/');
+            } else {
+                session()->setFlashdata('token', 'Token tidak ditemukan');
+                return redirect()->to('/');
+            }
+        } else {
+            session()->setFlashdata('token', 'Token tidak ditemukan');
+            return redirect()->to('/');
+        }
+    }
+
 
     public function valid_login()
     {
@@ -143,31 +165,6 @@ class Auth extends BaseController
             return redirect()->to('/');
         }
     }
-
-
-    public function activate($token)
-    {
-        if ($token) {
-            $user = $this->userModel->where(['active' => $token])->first();
-            if ($user) {
-                $this->userModel->save([
-                    'userid' => $user['userid'],
-                    'active' => 'true'
-                ]);
-
-                session()->setFlashdata('aktif', 'Akun berhasil diaktivasi');
-                return redirect()->to('/');
-            } else {
-                session()->setFlashdata('token', 'Token tidak ditemukan');
-                return redirect()->to('/');
-            }
-        } else {
-            session()->setFlashdata('token', 'Token tidak ditemukan');
-            return redirect()->to('/');
-        }
-    }
-
-
 
     public function logout()
     {

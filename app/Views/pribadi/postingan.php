@@ -34,27 +34,23 @@
 
 <row class="postingan">
 
-    <div class="gridds">
-        <?php foreach ($foto as $f) : ?>
-
-            <div class="box">
-
-                <a href="/galeri/<?= $f['fotoid']; ?>">
-                    <img src="/image_storage/<?= $f['foto']; ?>" alt="">
-
-                    <div class="hover-box">
-                        <ul>
-                            <li><i class="fa-solid fa-heart" style="color:red;"></i>&nbsp;&nbsp;<?= $jumlahlike ?> suka</li>
-                            <li style="margin-left:20px;"><i class="fa-regular fa-comment"></i>&nbsp;<?= $jumlahkomen ?> komentar</li>
-                        </ul>
-                    </div>
-                </a>
-
-            </div>
-        <?php endforeach; ?>
-    </div>
-
+    <?php if (!empty($foto)) : ?>
+        <div class="gridds">
+            <?php foreach ($foto as $f) : ?>
+                <div class="box">
+                    <a href="/galeri/<?= $f['fotoid']; ?>">
+                        <img src="/image_storage/<?= $f['foto']; ?>" alt="">
+                        <div class="hover-box">
+                        </div>
+                    </a>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    <?php else : ?>
+        <center><p style="font-size:14px; margin-top:30px; color:gray;">Belum ada postingan yang dibuat</p></center>
+    <?php endif; ?>
 
 </row>
+
 
 <?= $this->endSection(); ?>

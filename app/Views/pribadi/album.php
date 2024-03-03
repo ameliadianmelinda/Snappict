@@ -37,33 +37,38 @@
 <link rel="stylesheet" href="<?= base_url(); ?>/css/album.css">
 
 <row class="icon-add">
-    <div class="add" onclick="redirectToPage('/beranda')">
-        <a href="/profil-create-album">
-            <i class="fa-solid fa-plus"></i>
-        </a>
-    </div>
+    <a href="/profil-create-album">
+        <i class="fa-solid fa-plus"></i>
+    </a>
 </row>
 
 <row>
-    <div class="grids">
-        <?php foreach ($album as $al) : ?>
-            <div class="box">
-            
-                <a href="/galeri-album/<?= $al['albumid']; ?>" style="text-decoration:none; color:black;">
-                    <div class="cover">
-                        <img src="/image_storage/<?= $al['cover_album']; ?>" alt="">
-                    </div>
+    <?php if (!empty($album)) : ?>
+        <div class="grids">
+            <?php foreach ($album as $al) : ?>
+                <div class="box">
 
-                    <div class="deskripsi">
-                        <p><?= $al['nama_album'] ?></p>
-                    </div>
+                    <a href="/galeri-album/<?= $al['albumid']; ?>" style="text-decoration:none; color:black;">
+                        <div class="cover">
+                            <img src="/image_storage/<?= $al['cover_album']; ?>" alt="">
+                        </div>
 
-                    <div class="hover-box">
-                    </div>
-                </a>
-            </div>
-        <?php endforeach; ?>
-    </div>
+                        <div class="deskripsi">
+                            <p><?= $al['nama_album'] ?></p>
+                        </div>
+
+                        <div class="hover-box">
+                        </div>
+                    </a>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    <?php else : ?>
+        <center>
+            <p style="font-size:14px; color:gray;">Belum ada album yang dibuat</p>
+        </center>
+    <?php endif; ?>
 </row>
+
 
 <?= $this->endSection(); ?>

@@ -19,8 +19,15 @@ class Editprofil extends BaseController
         $this->session = \Config\Services::session();
     }
 
-    public function index(): string
+    public function index()
     {
+         // Periksa apakah ada data session untuk user
+         if (!session()->get('userid')) {
+            // Jika tidak, arahkan ke halaman login
+            return redirect()->to('/');
+        }
+
+
         //menampikan username sesuai session login
         $user = $this->userModel->getUser(session()->get('userid'));
 
@@ -30,7 +37,6 @@ class Editprofil extends BaseController
 
         return view('pribadi/editprofil' , $data);
     }
-
 
 
     public function update($id)

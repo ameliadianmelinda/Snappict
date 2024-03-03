@@ -40,6 +40,12 @@ class User extends BaseController
 
     public function index($userid)
     {
+         // Periksa apakah ada data session untuk user
+         if (!session()->get('userid')) {
+            // Jika tidak, arahkan ke halaman login
+            return redirect()->to('/');
+        }
+        
         // get data user berdasarkan id
         $user = $this->userModel->getUserById($userid);
         $userid = $user['userid'];
@@ -53,6 +59,12 @@ class User extends BaseController
 
     public function userpostingan($userid)
     {
+         // Periksa apakah ada data session untuk user
+         if (!session()->get('userid')) {
+            // Jika tidak, arahkan ke halaman login
+            return redirect()->to('/');
+        }
+
         // get data user berdasarkan id
         $user = $this->userModel->getUserById($userid);
         $userid = $user['userid'];
@@ -70,6 +82,12 @@ class User extends BaseController
 
     public function useralbum($userid)
     {
+         // Periksa apakah ada data session untuk user
+         if (!session()->get('userid')) {
+            // Jika tidak, arahkan ke halaman login
+            return redirect()->to('/');
+        }
+
         // get data user berdasarkan id
         $user = $this->userModel->getUserById($userid);
         $userid = $user['userid'];
@@ -88,6 +106,12 @@ class User extends BaseController
     // buat controller untuk menampilkan like yang dilakukan user berdasarkan id user
     public function usersuka($userid)
     {
+         // Periksa apakah ada data session untuk user
+         if (!session()->get('userid')) {
+            // Jika tidak, arahkan ke halaman login
+            return redirect()->to('/');
+        }
+
         // get data user berdasarkan id
         $user = $this->userModel->getUserById($userid);
         $userid = $user['userid'];
@@ -110,28 +134,5 @@ class User extends BaseController
 
         return view('user/usersuka', $data);
     }
-    // {
-        
-    //     // get data user berdasarkan id
-    //     $user = $this->userModel->getUserById($userid);
-    //     $userid = $user['userid'];
-
-    //     //ambil data foto yang di like beradasarkan id user
-
-    //     $liked = $this->likeModel->getLikedFoto($userid);
-    //     $foto = [];
-    //     foreach ($liked as $like) {
-    //         $foto[] = $this->fotoModel->getFoto($like['fotoid']);    
-    //     }
-    //     $foto = array_reverse($foto);
-        
     
-
-    //     $data = [
-    //         'user' => $user,
-    //         'foto' => $foto,
-    //     ];
-
-    //     return view('user/usersuka', $data);
-    // }
 }

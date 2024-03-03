@@ -42,6 +42,12 @@ class Komentar extends BaseController
 
     public function galeri($id)
     {
+        // Periksa apakah ada data session untuk user
+        if (!session()->get('userid')) {
+            // Jika tidak, arahkan ke halaman login
+            return redirect()->to('/');
+        }
+
         $foto = $this->fotoModel->find($id);
         $userid = $foto['userid'];
 
@@ -72,7 +78,7 @@ class Komentar extends BaseController
 
         return view('home/komentar', $data);
     }
-    
+
 
     public function save($id)
     {
@@ -86,6 +92,7 @@ class Komentar extends BaseController
 
         return redirect()->to('/galeri/' . $id);
     }
+
 
     public function delete($id, $fotoid)
     {

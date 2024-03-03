@@ -23,26 +23,23 @@ class Beranda extends BaseController
         $this->komentarModel = new KomentarModel();
     }
 
-    public function index(): string
+    public function index()
     {
-        // ambil foto
+        // Periksa apakah ada data session untuk user
+        if (!session()->get('userid')) {
+            // Jika tidak, arahkan ke halaman login
+            return redirect()->to('/');
+        }
+    
+        // Ambil foto
         $foto = $this->fotoModel->findAll();
         $foto = array_reverse($foto);
-
+    
         $data = [
             'foto' => $foto,
         ];
-
+    
         return view('home/beranda', $data);
     }
-
-    public function beranda2(): string
-    {
-        return view('home/beranda2');
-    }
-
-    public function modal(): string
-    {
-        return view('modal/index');
-    }
+    
 }

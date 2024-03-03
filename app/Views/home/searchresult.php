@@ -30,7 +30,6 @@ $UserModel = new UserModel();
 
 <div class="container">
 
-
     <?php if (empty($foto)) : ?>
         <div class="user-display">
             <?php foreach ($akun as $a) : ?>

@@ -70,3 +70,6 @@ $routes->get('/profil-user/(:num)', 'User::userpostingan/$1');
 $routes->get('/profil-user-album/(:num)', 'User::useralbum/$1');
 $routes->get('/profil-user-suka/(:num)', 'User::usersuka/$1');
 
+// buat routes untuk contoh 
+$routes->get('/contoh', 'Beranda::contoh');
+

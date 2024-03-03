@@ -84,6 +84,10 @@
   margin-left: 15px;
 }
 
+.user-hide:hover {
+  color: rgb(202, 110, 202);
+}
+
 .tgl-hide {
   font-size: 15px;
   margin-left: 15px;
@@ -157,7 +161,7 @@
 
 .www2 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .text-komentar {
@@ -170,7 +174,7 @@
   margin-top: 20px;
 }
 
-.komentar2 > a  > img {
+.komentar2 > img {
   width: 6%;
   border-radius: 100%;
 }
@@ -179,12 +183,16 @@
   font-size: 18px;
 }
 
+.komen2-username:hover {
+  color: rgb(202, 110, 202);
+}
+
 .komen2-komentar {
   font-size: 13px;
 }
 
 .detail_komentar2 {
-  margin-left: -520px;
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -221,6 +229,104 @@
 .form_komentar2 > form > button:hover {
   background-color: rgba(206, 194, 207, 0.7);
 }
+
+
+
+.sub-menu-wrap-komen33 {
+  position: absolute;
+  transition: 0.2s;
+  display: none;
+  transition: 0.2s;
+}
+
+.sub-menu-wrap-komen33.open-menu-komen-33 {
+  display: block;
+}
+
+.sub-menu-komen33 {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  width: 190px;
+  right: -20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-menu-komen33 > button {
+  border: none;
+  background-color: transparent;
+  justify-content: start;
+  color: black;
+}
+
+.sub-menu-komen33 > button:hover {
+  color: rgb(202, 110, 202);
+  transition: all .2s ease-in-out;
+}
+
+.sub-menu-komen33 > a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+
+.sub-menu-komen33 > a:hover {
+  color: rgb(202, 110, 202);
+  transition: all .2s ease-in-out;
+}
+
+
+/* double dropdown hidden */
+.sub-submenus-wrap-44 {
+  position: absolute;
+  transition: 0.2s;
+  display: none;
+  transition: 0.2s;
+  z-index: 1050;
+}
+
+.sub-submenus-wrap-44.open-submenus44 {
+  display: block;
+}
+
+.sub-submenus44 {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  width: auto;
+  left: -130px;
+  top: 60px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1050;
+}
+
+.sub-submenus44 > a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+
+.sub-submenus44 > a:hover {
+  color: rgb(202, 110, 202);
+  transition: all .2s ease-in-out;
+}
+/* end */
+
+
 /* end hidden */
 
 
@@ -255,10 +361,6 @@
 }
 
 .sub-menu-wrap-komen.open-menu-komen-1 {
-  display: block;
-}
-
-.sub-menu-wrap-komen.open-menu-komen-11 {
   display: block;
 }
 
@@ -344,6 +446,160 @@
   color: rgb(202, 110, 202);
   transition: all .2s ease-in-out;
 }
+
+
+/* modal hidden */
+.modal2 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content2 {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.modal-content2 > p {
+  margin-top :40px;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.button-container2 {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.button-container2 > a {
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+  justify-content: center;
+  border: none;
+  border-radius: 20px;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: lightgray;
+}
+
+.button-container2 > a:hover {
+  background-color: rgb(216, 153, 216);
+  color: white;
+  transition: all .2s ease-in-out;
+}
+
+.close2 {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close2:hover,
+.close2:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.delete-button2 {
+  margin-bottom: 15px;
+}
+
+
+/* modal komen */
+.modal-komen2 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content-komen2 {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.modal-content-komen2 > p {
+  margin-top: 40px;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.button-container-komen2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container-komen2 > a {
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+  justify-content: center;
+  border: none;
+  border-radius: 20px;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: lightgray;
+}
+
+.button-container-komen2 > a:hover {
+  background-color: rgb(216, 153, 216);
+  color: white;
+  transition: all .2s ease-in-out;
+}
+
+.closeKomen2 {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closeKomen2:hover,
+.closeKomen2:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.delete-button-komen2 {
+  margin-bottom: 15px;
+}
+
+
 /* end */
 
 
@@ -359,48 +615,6 @@
   transition: all .2s ease-in-out;
 }
 /* end */
-
-
-/* elips dropdown bawah */
-/* .wrap-komen-bawah {
-  position: absolute;
-  display: none;
-  transition: 0.2s; 
-}
-
-.wrap-komen-bawah .open-wrap-komen-bawah {
-  display: block;
-}
-
-.komen-bawah {
-  position: absolute;
-  background-color: white;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  border-radius: 10px;
-  width: 100px;
-  right: -30px;
-  top: -5px;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.komen-bawah > a {
-  text-decoration: none;
-  color: black;
-  font-size: 15px;
-}
-
-.komen-bawah > a:hover {
-  color: rgb(202, 110, 202);
-  transition: all .2s ease-in-out;
-} */
-/* end */
-
 
 
 .detail_imgs {
@@ -448,7 +662,7 @@
 }
 
 .deskripsi {
-  margin-left: 60px;
+  margin-left: 70px;
   margin-top: 10px;
 }
 
@@ -545,6 +759,161 @@
 .form_komentar > form > button:hover {
   background-color: rgba(206, 194, 207, 0.7);
 }
+
+
+/* modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.modal-content > p {
+  margin-top :40px;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.button-container > a {
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+  justify-content: center;
+  border: none;
+  border-radius: 20px;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: lightgray;
+}
+
+.button-container > a:hover {
+  background-color: rgb(216, 153, 216);
+  color: white;
+  transition: all .2s ease-in-out;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.delete-button {
+  margin-bottom: 15px;
+}
+/* end modal */
+
+/* modal komen */
+.modal-komen {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content-komen {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.modal-content-komen > p {
+  margin-top: 40px;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.button-container-komen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container-komen > a {
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+  justify-content: center;
+  border: none;
+  border-radius: 20px;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: lightgray;
+}
+
+.button-container-komen > a:hover {
+  background-color: rgb(216, 153, 216);
+  color: white;
+  transition: all .2s ease-in-out;
+}
+
+.closeKomen {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closeKomen:hover,
+.closeKomen:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.delete-button-komen {
+  margin-bottom: 15px;
+}
+
+/* end modal komen */
+
 
 @media (max-width: 2210px){
   .hidden {
